@@ -1,0 +1,23 @@
+.button-create {
+  align-items: center;
+  background: #98c222;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  font-size: 1.3em;
+  font-weight: bold;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  margin-top: 30px;
+  transition: background-color 0.3 ease-in-out;
+}
+
+.button-create:hover {
+  background: #84aa1c;
+}
+
+.button-create:disabled {
+  cursor: not-allowed;
+  color: black;
+}

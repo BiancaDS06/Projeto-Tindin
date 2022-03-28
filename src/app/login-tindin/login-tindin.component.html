@@ -1,0 +1,41 @@
+<main id="login">
+  <div class="screen-login">
+    <img
+      class="logo-tindin"
+      src="../../assets/logo_tindin.png"
+      alt="logo tindin"
+    />
+
+    <form [formGroup]="loginForms" class="form-container">
+      <mat-form-field class="input-container" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input
+          formControlName="email"
+          type="email"
+          matInput
+          [autocomplete]="false"
+          placeholder="exemplo@gmail.com"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="input-container" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          [autocomplete]="false"
+          matInput
+        />
+      </mat-form-field>
+
+      <button (click)="login()" class="button" mat-stroked-button>Login</button>
+    </form>
+
+    <div class="hybrid-login-form-other">
+      <ul>
+        <li><a href="#">Esqueci minha senha</a></li>
+        <li><a href="#">Cadastre-se</a></li>
+      </ul>
+    </div>
+  </div>
+</main>

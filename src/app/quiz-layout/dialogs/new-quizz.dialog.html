@@ -1,0 +1,102 @@
+<main>
+  <form [formGroup]=" addQuizzForm" class="row w-100">
+    <section class="col-lg-4 col-6">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Team</mat-label>
+        <input matInput type="text" formControlName="team" />
+      </mat-form-field>
+    </section>
+
+    <section class="col-lg-4 col-6">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" formControlName="title" />
+      </mat-form-field>
+    </section>
+
+    <section class="col-12">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Description</mat-label>
+        <input matInput type="text" formControlName="description" />
+      </mat-form-field>
+    </section>
+
+    <section class="col-6">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Level</mat-label>
+        <input matInput type="text" formControlName="level" />
+      </mat-form-field>
+    </section>
+
+    <section class="col-6">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Type</mat-label>
+        <input matInput type="text" formControlName="type" />
+      </mat-form-field>
+    </section>
+
+    <section class="col-6">
+      <mat-form-field appearance="standard" class="w-100">
+        <mat-label>Reward Xp</mat-label>
+        <input
+          matInput
+          min="0"
+          max="100"
+          type="number"
+          formControlName="rewardXp"
+        />
+      </mat-form-field>
+    </section>
+
+    <form [formGroup]="optionsForm" class="row w-100">
+      <section class="col-6 d-flex align-items-center">
+        <mat-form-field appearance="standard" class="w-90">
+          <mat-label>Option A</mat-label>
+          <input matInput type="text" formControlName="optionA" />
+        </mat-form-field>
+        <mat-checkbox
+          (change)="changeCorrectValueOfOption(0, $event)"
+        ></mat-checkbox>
+      </section>
+
+      <section class="col-6 d-flex align-items-center">
+        <mat-form-field appearance="standard" class="w-90">
+          <mat-label>Option B</mat-label>
+          <input matInput type="text" formControlName="optionB" />
+        </mat-form-field>
+        <mat-checkbox
+          (change)="changeCorrectValueOfOption(1, $event)"
+        ></mat-checkbox>
+      </section>
+
+      <section class="col-6 d-flex align-items-center">
+        <mat-form-field appearance="standard" class="w-90">
+          <mat-label>Option C</mat-label>
+          <input matInput type="text" formControlName="optionC" />
+        </mat-form-field>
+        <mat-checkbox
+          (change)="changeCorrectValueOfOption(2, $event)"
+        ></mat-checkbox>
+      </section>
+
+      <section class="col-6 d-flex align-items-center">
+        <mat-form-field appearance="standard" class="w-90">
+          <mat-label>Option D</mat-label>
+          <input matInput type="text" formControlName="optionD" />
+        </mat-form-field>
+
+        <mat-checkbox
+          (change)="changeCorrectValueOfOption(3, $event)"
+        ></mat-checkbox>
+      </section>
+    </form>
+  </form>
+
+  <button
+    (click)="addQuiz()"
+    class="button-create"
+    [disabled]="!addQuizzForm.valid"
+  >
+    Criar Quizz
+  </button>
+</main>

@@ -1,0 +1,67 @@
+#login {
+  background-color: white;
+  height: 100vh;
+  padding: 50px;
+  width: 100vw;
+}
+
+.screen-login {
+  background-color: #ececec;
+  border-radius: 20px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  width: 400px;
+}
+
+.logo-tindin {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  left: 120px;
+}
+
+.form-container {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+}
+
+.input-container {
+  display: block;
+  width: 300px;
+}
+
+.button {
+  background: #98c222;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.2em;
+  left: 100px;
+  margin-top: 8px;
+  position: absolute;
+  transition: background-color 0.3s;
+  width: 100px;
+}
+.button:hover {
+  color: #3f51b5;
+  background: #84aa1c;
+}
+
+.hybrid-login-form-other {
+  position: absolute;
+  top: 350px;
+  text-align: center;
+  left: 90px;
+}
+.hybrid-login-form-other li {
+  list-style: none;
+}
+.hybrid-login-form-other a {
+  text-decoration: none;
+  color: black;
+}
+.hybrid-login-form-other a:hover {
+  text-decoration: underline;
+  color: #3f51b5;
+}

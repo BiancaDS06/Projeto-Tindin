@@ -1,0 +1,56 @@
+<header class="header-quizz">
+  <img src="../../assets/logoquiz.png" alt="logo-quiz" />
+</header>
+
+<main class="main-quizz">
+  <section class="title-quizz">
+    <h1>Cadastro de quizzes</h1>
+    <button mat-raised-button color="accent" (click)="openAddQuizModal()">
+      Adicionar
+    </button>
+  </section>
+
+  <mat-divider></mat-divider>
+
+  <section class="cards-quizz">
+    <mat-card *ngFor="let quizz of quizzes">
+      <mat-card-title>
+        <div class="w-100 d-flex justify-content-between">
+          <span>{{ quizz.description }}</span>
+          <div class="">
+            {{ quizz.level }}
+          </div>
+        </div>
+      </mat-card-title>
+
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          color="accent"
+          mat-button
+          (click)="editQuizz(quizz)"
+        >
+          Editar
+        </button>
+
+        <button
+          mat-raised-button
+          color="accent"
+          mat-button
+          (click)="deleteQuizz(quizz)"
+        >
+          Excluir
+        </button>
+
+        <button
+          mat-raised-button
+          color="accent"
+          mat-button
+          (click)="viewQuizz()"
+        >
+          Visualizar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+</main>

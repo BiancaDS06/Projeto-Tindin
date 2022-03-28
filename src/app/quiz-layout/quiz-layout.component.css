@@ -1,0 +1,38 @@
+.header-quizz {
+  background-color: white;
+  border-bottom: 2px solid rgb(93, 89, 89);
+}
+.header-quizz img {
+  width: 120px;
+  margin-left: 50px;
+}
+
+.main-quizz{
+  margin: 10px 5% 0;
+
+}
+
+.title-quizz{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-flow: row wrap;
+}
+
+.title-quizz button{
+  width: 200px ;
+}
+
+.cards-quizz{
+  margin-top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.cards-quizz mat-card{
+  margin-bottom: 30px;
+  width: 48%;
+}
+
